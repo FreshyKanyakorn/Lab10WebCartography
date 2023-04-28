@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href=https://unpkg.com/leaflet@1.9.3/dist/leaflet.css integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI="crossorigin=""/>
+<script src=https://unpkg.com/leaflet@1.9.3/dist/leaflet.js integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
+</head>
+<body>
+<div id="map" style="height: 600px"></div>
+<script>
+   var map = L.map('map').setView([13.80766424118624, 100.51954768486112], 12.3);
+   L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+}).addTo(map);
+
+var marker1 = L.marker([13.808327237871987, 100.5188710387338]).addTo(map);
+marker1.bindPopup("<b>Bang Pho Police Station</b><br>Bangkok, Thailand><center><img width='200px'src='img/POLICE.jpg'></center>").openPopup();
+
+var marker2 = L.marker([13.805676585502516, 100.52399595112476]).addTo(map);
+marker2.bindPopup("<b>Gateway at Bangsue</b><br>Bangkok, Thailand><center><img width='200px'src='img/gateway.jpg'></center>").openPopup();
+
+var marker3 = L.marker([13.806583080868993, 100.52101552651247]).addTo(map);
+marker3.bindPopup("<b>MRT Bang Pho</b><br>Bangkok, Thailand><center><img width='200px'src='img/mrt.jpg'></center>").openPopup();
+
+var marker4 = L.marker([13.808891702612998, 100.51904810232361]).addTo(map);
+marker4.bindPopup("<b>Wat Bang Pho Omawat</b><br>Bangkok, Thailand><center><img width='200px'src='img/WBANGPHO.jpg'></center>").openPopup();
+
+var marker5 = L.marker([13.79989168838032, 100.51843989773194]).addTo(map);
+marker5.bindPopup("<b>Wat Kaew Fah Chulamanee</b><br>Bangkok, Thailand><center><img width='200px'src='img/wkaew.jpg'></center>").openPopup();
+</script>
+</body>
+</html>*
